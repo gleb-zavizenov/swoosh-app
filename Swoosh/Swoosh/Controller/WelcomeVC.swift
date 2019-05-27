@@ -8,11 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeVC: UIViewController {
 
+    @IBOutlet weak var smoosh: UIImageView!
+    @IBOutlet weak var background: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func unwindFromLeagueVC(unwindSegue : UIStoryboardSegue) {
+        
     }
 
 
