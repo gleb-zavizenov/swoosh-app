@@ -9,16 +9,47 @@
 import UIKit
 
 class LeagueVC: UIViewController {
+    
+    var player : Player!
 
+    @IBOutlet weak var nextBtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        player = Player()
     }
     
     @IBAction func onNextTapped(_ sender: UIButton) {
         performSegue(withIdentifier: "goToLevelVC", sender: self)
     }
+    
+    @IBAction func onMensTapped(_ sender: UIButton) {
+        selectLeague(selectedLeague: "mens")
+    }
+    
+    @IBAction func onWomensTapped(_ sender: UIButton) {
+        selectLeague(selectedLeague: "womens")
+    }
+    
+    @IBAction func onCoedTapped(_ sender: UIButton) {
+        selectLeague(selectedLeague: "coed")
+    }
+    
+    func selectLeague(selectedLeague : String) {
+        player.desiredLeague = selectedLeague
+        nextBtn.backgroundColor = UIColor(red: 85/255, green: 239/255, blue: 196/255, alpha: 1.0)
+        nextBtn.isEnabled = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let skillVC = segue.destination as? SkillVC{
+             skillVC.player = player
+        }
+    }
+    
+    
     
     /*
     // MARK: - Navigation
