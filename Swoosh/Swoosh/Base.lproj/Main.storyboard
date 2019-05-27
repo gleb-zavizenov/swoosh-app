@@ -55,6 +55,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ojs-Qh-YJb" kind="show" id="cgJ-NK-Efm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -96,6 +99,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desiredLeagueBG" translatesAutoresizingMaskIntoConstraints="NO" id="F9j-RT-2Yv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desired League:" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkw-lt-Boq">
                                 <rect key="frame" x="136.5" y="184" width="141.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -153,10 +159,21 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Hep-xM-ZNZ" kind="show" id="xB3-er-wvo"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desiredLeagueBG" translatesAutoresizingMaskIntoConstraints="NO" id="F9j-RT-2Yv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGy-IN-qyO" userLabel="BackButton">
+                                <rect key="frame" x="20" y="59" width="35" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="Oac-Dq-Q9T"/>
+                                    <constraint firstAttribute="height" constant="25" id="fLL-Cp-LLj"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="JVm-Tg-At8" kind="unwind" unwindAction="unwindFromLeagueVCWithUnwindSegue:" id="NTm-IM-7Oc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -164,8 +181,10 @@
                             <constraint firstItem="Nxn-It-yvN" firstAttribute="bottom" secondItem="cXd-Qs-6rQ" secondAttribute="bottom" id="AO3-Ov-ruv"/>
                             <constraint firstItem="F9j-RT-2Yv" firstAttribute="trailing" secondItem="Nxn-It-yvN" secondAttribute="trailing" id="BHY-Vf-wQa"/>
                             <constraint firstItem="Bkw-lt-Boq" firstAttribute="centerX" secondItem="e8p-wX-ob9" secondAttribute="centerX" id="Fwa-ar-RG2"/>
+                            <constraint firstItem="mGy-IN-qyO" firstAttribute="leading" secondItem="Nxn-It-yvN" secondAttribute="leading" constant="20" id="H5g-Nb-HS9"/>
                             <constraint firstAttribute="bottom" secondItem="F9j-RT-2Yv" secondAttribute="bottom" id="JpH-ym-hQw"/>
                             <constraint firstItem="Bkw-lt-Boq" firstAttribute="top" secondItem="O3L-e1-9UI" secondAttribute="bottom" constant="100" id="O16-YC-cwL"/>
+                            <constraint firstItem="mGy-IN-qyO" firstAttribute="top" secondItem="Nxn-It-yvN" secondAttribute="top" constant="15" id="SAl-6Q-lGu"/>
                             <constraint firstItem="cXd-Qs-6rQ" firstAttribute="leading" secondItem="Nxn-It-yvN" secondAttribute="leading" constant="20" id="WKf-dx-IZA"/>
                             <constraint firstItem="F9j-RT-2Yv" firstAttribute="leading" secondItem="Nxn-It-yvN" secondAttribute="leading" id="aIx-Jc-r2n"/>
                             <constraint firstItem="O3L-e1-9UI" firstAttribute="top" secondItem="Nxn-It-yvN" secondAttribute="top" constant="20" id="brO-P8-KL0"/>
@@ -180,6 +199,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ze-iW-Sio" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="JVm-Tg-At8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="855.07246376811599" y="138.61607142857142"/>
         </scene>
@@ -269,6 +289,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
