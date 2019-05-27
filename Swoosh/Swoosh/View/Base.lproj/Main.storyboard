@@ -22,10 +22,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="iWC-Sj-91o">
-                                <rect key="frame" x="199" y="64" width="16" height="16"/>
+                                <rect key="frame" x="147.5" y="64" width="119" height="20"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3K-8I-9yN">
-                                <rect key="frame" x="75.5" y="165" width="263" height="72"/>
+                                <rect key="frame" x="75.5" y="169" width="263" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="263" id="8xf-7O-EGA"/>
                                 </constraints>
@@ -34,13 +34,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON GOING OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcl-ve-ms2">
-                                <rect key="frame" x="75.5" y="237" width="263" height="43"/>
+                                <rect key="frame" x="75.5" y="241" width="263" height="43"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a team in your city &amp; dominate the league" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKw-Pt-eoQ">
-                                <rect key="frame" x="75.5" y="295" width="263" height="41"/>
+                                <rect key="frame" x="75.5" y="299" width="263" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -160,7 +160,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Hep-xM-ZNZ" kind="show" id="xB3-er-wvo"/>
+                                    <action selector="onNextTapped:" destination="ojs-Qh-YJb" eventType="touchUpInside" id="nL1-NY-6QJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGy-IN-qyO" userLabel="BackButton">
@@ -197,11 +197,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nxn-It-yvN"/>
                     </view>
+                    <connections>
+                        <segue destination="Hep-xM-ZNZ" kind="show" identifier="goToLevelVC" id="2Ue-SM-Ky5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ze-iW-Sio" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="JVm-Tg-At8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="855.07246376811599" y="138.61607142857142"/>
+            <point key="canvasLocation" x="870" y="139"/>
         </scene>
         <!--SkillVC-->
         <scene sceneID="Kya-wK-ZKh">

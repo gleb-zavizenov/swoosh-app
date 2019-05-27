@@ -16,7 +16,10 @@ class LeagueVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onNextTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToLevelVC", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 
